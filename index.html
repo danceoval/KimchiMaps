@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neighborhood Map</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <h1>Kimchi Maps</h1>
+    </div>
+    <div class="row">
+        <div id="toggle"><div></div></div>
+    </div>
+    <div class="row">    
+        <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off" id="searchBar">
+    </div> 
+
+   
+
+     <div class="modal" id="m1">
+        <div class="row modalContent">
+            <h2>List View</h2>
+            <ul data-bind="foreach: restaurantNames()">
+                <li data-bind="text: $data[0]" class="clickable">
+                </li>
+            </ul>
+        </div>       
+    </div>
+    <div id='map-canvas'>
+       
+    </div>   
+
+   
+    
+
+
+      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsEtAF7c3HHdalgEdWgHcD3fD--fsjosw"></script>
+    <script src="js/lib/knockout-3.2.0.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

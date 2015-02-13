@@ -1,0 +1,80 @@
+ html, body, #map-canvas { 
+ 	height: 100%;
+ 	width: 100%;
+ 	margin: 0; 
+ 	padding: 0;
+
+ }
+ 
+ #searchBar{
+ 	width: 20%;
+	font-size: 22px;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 1em;
+	float: right;
+ }
+
+   
+
+ h1,h2,h3,h4 {
+ 	font-family: "Helvetica", sans-serif;
+ 	z-index: 1;
+ 	text-align: center;
+ 	color: #272727;
+ }
+
+ ul {
+ 	font-family: "Helvetica", sans-serif;
+ 	z-index: 1;
+ 	text-align: center;
+ 	color: #272727;
+ 	font-size: 16px;
+ 	list-style: none;
+ 	padding: 0;
+ }
+
+
+#toggle{
+	background-image: url("../img/plus.png");
+	background-size: 36px 34px;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+	float: left;
+	margin: 1em;
+	display:block;
+}
+
+#toggle.active{
+	background-image: url("../img/minus.png");
+}
+
+.modal{
+	background-image: url("../img/modal.png");
+	background-repeat: no-repeat;
+	width: 16em;
+	height: 23em;
+	z-index: 2;
+	position:absolute;
+	left:2em;
+	top: 13em;
+	border-top-right-radius: 1.7em;
+	border-bottom-right-radius: 1.7em;
+	border-bottom-left-radius: 1.7em;
+	display: none;
+	
+}
+
+.modal.active{
+	display: block;
+}
+
+.modalContent{
+	position: absolute;
+	top: 1em;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
