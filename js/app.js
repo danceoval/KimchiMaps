@@ -36,23 +36,28 @@ var ViewModel = function() {
         var checkins = venue.stats.checkinsCount;
         var pos = new google.maps.LatLng(lat,lng);
 
-        //contact();
-
         var markerOptions = {
             map: MAP,
             position: pos,
             address: address,
             checkins: checkins,
-
-            animation: google.maps.Animation.DROP,
+            animation: google.maps.Animation.BOUNCE,
             icon: "img/kimchi.png",
             title: name
         };
 
 
-        //var mark = ko.observable(markerOptions);
-        //var marker = new google.maps.Marker(mark());
         var marker = new google.maps.Marker(markerOptions);
+        marker.setAnimation(null);
+
+        google.maps.event.addListener(marker, 'click', function() {
+
+              if (marker.getAnimation() != null) {
+                marker.setAnimation(null);
+              } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+              }
+            });
 
         google.maps.event.addListener(marker, 'click', function() {
             //console.log("click");
@@ -123,10 +128,11 @@ var ViewModel = function() {
             google.maps.event.trigger(MAP, "resize");
             MAP.setCenter(center); 
         });
+        
 
     };
     self.initialize();
-    console.log(self.markerList());
+    //console.log(self.markerList());
 };
 
 $(document).ready(function() {
@@ -140,6 +146,7 @@ $(document).ready(function() {
             $("#m1").addClass('active');
         }
     });
+
 
 
     var vm = new ViewModel();
