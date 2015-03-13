@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Neighborhood Map</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
@@ -11,14 +13,11 @@
         <h1>Kimchi Maps</h1>
     </div>
     <div class="row">
-        <div id="toggle"><div></div></div>
+        <div id="toggle"></div>
     </div>
     <div class="row">    
         <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off" id="searchBar">
     </div> 
-
-   
-
      <div class="modal" id="m1">
         <div class="row modalContent">
             <h2>List View</h2>
@@ -28,18 +27,7 @@
             </ul>
         </div>       
     </div>
-
-
-
-    <div id='map-canvas'>
-       
-    </div>   
-
-   
-    
-
-
-      
+    <div id='map-canvas'></div>   
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsEtAF7c3HHdalgEdWgHcD3fD--fsjosw"></script>
     <script src="js/lib/knockout-3.2.0.js"></script>
